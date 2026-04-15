@@ -6,6 +6,7 @@ import os
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import PlainTextResponse
 
 from apps.api.routers.alerts_dashboard import router as alerts_dashboard_router
 from apps.api.routers.analysis import router as analysis_router
@@ -65,4 +66,9 @@ app.include_router(public_router)
 @app.get("/health")
 def health() -> dict[str, str]:
     return {"status": "ok"}
+
+
+@app.get("/ping", response_class=PlainTextResponse)
+def ping() -> str:
+    return "pong"
 
