@@ -1,0 +1,7 @@
+{
+  "framework": "vite",
+  "rootDirectory": "apps/miniapp",
+  "installCommand": "npm install",
+  "buildCommand": "npx vite build",
+  "outputDirectory": "dist"
+}
