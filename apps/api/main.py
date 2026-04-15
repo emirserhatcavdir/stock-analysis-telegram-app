@@ -43,11 +43,11 @@ def _cors_allow_all_debug() -> bool:
     return value in {"1", "true", "yes", "on"}
 
 app = FastAPI(title="BIST Bot API", version="0.1.0")
-allow_all = _cors_allow_all_debug()
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"] if allow_all else _cors_origins_from_env(),
-    allow_credentials=False if allow_all else True,
+    allow_origins=["http://localhost:5173", "http://127.0.0.1:5173"],
+    allow_origin_regex=r"https://stock-analysis-telegram-.*\.vercel\.app",
+    allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
