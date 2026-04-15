@@ -1,11 +1,11 @@
-﻿"""Dashboard-facing alert endpoints."""
+"""Dashboard-facing alert endpoints."""
 
 from __future__ import annotations
 
 from fastapi import APIRouter, HTTPException
 
-from schemas import AlertAddRequest, AlertRemoveRequest, AlertResponse, MutationResponse
-from services.alert_service import add_advanced_alert, add_price_alert, get_alerts, remove_alert
+from apps.api.schemas import AlertAddRequest, AlertRemoveRequest, AlertResponse, MutationResponse
+from apps.api.services.alert_service import add_advanced_alert, add_price_alert, get_alerts, remove_alert
 
 router = APIRouter(tags=["alerts"])
 

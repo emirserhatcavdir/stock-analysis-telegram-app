@@ -1,10 +1,10 @@
-﻿"""Portfolio service shared by Telegram bot and FastAPI routes."""
+"""Portfolio service shared by Telegram bot and FastAPI routes."""
 
 from __future__ import annotations
 
 from typing import Any
 
-from deps import load_portfolio
+from apps.api.deps import load_portfolio
 
 
 def get_portfolio(user_id: int) -> dict[str, Any]:

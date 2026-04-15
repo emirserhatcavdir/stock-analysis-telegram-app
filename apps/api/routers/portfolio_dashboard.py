@@ -1,11 +1,11 @@
-﻿"""Dashboard-facing portfolio endpoints."""
+"""Dashboard-facing portfolio endpoints."""
 
 from __future__ import annotations
 
 from fastapi import APIRouter, HTTPException
 
-from schemas import MutationResponse, PortfolioAddRequest, PortfolioRemoveRequest, UserPortfolioResponse
-from services.portfolio_service import add_position, get_portfolio, remove_position
+from apps.api.schemas import MutationResponse, PortfolioAddRequest, PortfolioRemoveRequest, UserPortfolioResponse
+from apps.api.services.portfolio_service import add_position, get_portfolio, remove_position
 
 router = APIRouter(tags=["portfolio"])
 

@@ -1,11 +1,11 @@
-﻿"""Dashboard-facing scan and rank endpoints."""
+"""Dashboard-facing scan and rank endpoints."""
 
 from __future__ import annotations
 
 from fastapi import APIRouter, HTTPException, Query
 
-from schemas import AnalysisResponse, MutationResponse, ScanResponse, WatchlistAddRequest
-from services.scan_service import add_symbol_to_watchlist, get_analysis, rank_symbols, run_scan
+from apps.api.schemas import AnalysisResponse, MutationResponse, ScanResponse, WatchlistAddRequest
+from apps.api.services.scan_service import add_symbol_to_watchlist, get_analysis, rank_symbols, run_scan
 
 router = APIRouter(tags=["scan"])
 

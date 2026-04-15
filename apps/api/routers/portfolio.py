@@ -1,4 +1,4 @@
-﻿"""Portfolio endpoints for the Mini App."""
+"""Portfolio endpoints for the Mini App."""
 
 from __future__ import annotations
 
@@ -6,8 +6,8 @@ from datetime import datetime
 
 from fastapi import APIRouter, HTTPException, Query
 
-from deps import load_portfolio
-from schemas import (
+from apps.api.deps import load_portfolio
+from apps.api.schemas import (
     MutationResponse,
     PortfolioAllocationItem,
     PortfolioInsightsResponse,

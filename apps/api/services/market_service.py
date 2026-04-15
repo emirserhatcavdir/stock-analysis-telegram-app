@@ -1,10 +1,10 @@
-﻿"""Service functions that reuse bot analysis/scanning logic."""
+"""Service functions that reuse bot analysis/scanning logic."""
 
 from __future__ import annotations
 
 from typing import Any
 
-from deps import (
+from apps.api.deps import (
     SCAN_UNIVERSES,
     analyze,
     get_chat_watchlist,

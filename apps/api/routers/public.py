@@ -1,11 +1,11 @@
-﻿"""Public API endpoints with clean path structure for Mini App/backend clients."""
+"""Public API endpoints with clean path structure for Mini App/backend clients."""
 
 from __future__ import annotations
 
 from fastapi import APIRouter, HTTPException, Query
 
-from schemas import ScanResponse, SymbolResponse, UserPortfolioResponse, UserWatchlistResponse
-from services.market_service import (
+from apps.api.schemas import ScanResponse, SymbolResponse, UserPortfolioResponse, UserWatchlistResponse
+from apps.api.services.market_service import (
     get_portfolio_by_user,
     get_scan_results,
     get_symbol_details,
