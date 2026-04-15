@@ -1,0 +1,224 @@
+{
+  "0": {
+    "portfolio": {
+      "AKBNK.IS": {
+        "shares": 0,
+        "buy_price": 66.9,
+        "buy_date": "2026-03-29"
+      }
+    },
+    "watchlist": [],
+    "alerts": {},
+    "trades": []
+  },
+  "1234": {
+    "portfolio": {
+      "AKBNK.IS": {
+        "shares": 0,
+        "buy_price": 66.9,
+        "buy_date": "2026-03-29"
+      },
+      "PETKM.IS": {
+        "shares": 100.0,
+        "buy_price": 500.0,
+        "buy_date": "2026-04-10",
+        "realized_pnl": 0.0
+      }
+    },
+    "watchlist": [
+      "BIMAS.IS",
+      "THYAO.IS"
+    ],
+    "alerts": {},
+    "trades": [
+      {
+        "timestamp": "2026-04-03T16:46:36",
+        "side": "buy",
+        "symbol": "BIMAS.IS",
+        "quantity": 15.0,
+        "price": 100.0,
+        "realized_pnl": 0.0
+      },
+      {
+        "timestamp": "2026-04-03T16:46:45",
+        "side": "sell",
+        "symbol": "BIMAS.IS",
+        "quantity": 15.0,
+        "price": 100.0,
+        "realized_pnl": 0.0
+      },
+      {
+        "timestamp": "2026-04-03T16:46:51",
+        "side": "buy",
+        "symbol": "BIMAS.IS",
+        "quantity": 15.0,
+        "price": 10000.0,
+        "realized_pnl": 0.0
+      },
+      {
+        "timestamp": "2026-04-03T18:40:43",
+        "side": "buy",
+        "symbol": "ASELSN.IS",
+        "quantity": 1.0,
+        "price": 150.0,
+        "realized_pnl": 0.0
+      },
+      {
+        "timestamp": "2026-04-03T18:40:51",
+        "side": "buy",
+        "symbol": "THYAO.IS",
+        "quantity": 100.0,
+        "price": 150.0,
+        "realized_pnl": 0.0
+      },
+      {
+        "timestamp": "2026-04-03T18:40:53",
+        "side": "sell",
+        "symbol": "THYAO.IS",
+        "quantity": 100.0,
+        "price": 150.0,
+        "realized_pnl": 0.0
+      },
+      {
+        "timestamp": "2026-04-03T19:00:33",
+        "side": "sell",
+        "symbol": "BIMAS.IS",
+        "quantity": 15.0,
+        "price": 10000.0,
+        "realized_pnl": 0.0
+      },
+      {
+        "timestamp": "2026-04-03T19:00:38",
+        "side": "sell",
+        "symbol": "ASELSN.IS",
+        "quantity": 1.0,
+        "price": 150.0,
+        "realized_pnl": 0.0
+      },
+      {
+        "timestamp": "2026-04-03T19:01:00",
+        "side": "buy",
+        "symbol": "AKBNK.IS",
+        "quantity": 1.0,
+        "price": 1.0,
+        "realized_pnl": 0.0
+      },
+      {
+        "timestamp": "2026-04-03T19:01:06",
+        "side": "sell",
+        "symbol": "AKBNK.IS",
+        "quantity": 1.0,
+        "price": 1.0,
+        "realized_pnl": 0.0
+      },
+      {
+        "timestamp": "2026-04-10T14:58:11",
+        "side": "buy",
+        "symbol": "PETKM.IS",
+        "quantity": 100.0,
+        "price": 500.0,
+        "realized_pnl": 0.0
+      }
+    ]
+  },
+  "12": {
+    "portfolio": {
+      "AKBNK.IS": {
+        "shares": 0,
+        "buy_price": 66.9,
+        "buy_date": "2026-03-29"
+      }
+    },
+    "watchlist": [],
+    "alerts": {},
+    "trades": []
+  },
+  "987654": {
+    "portfolio": {
+      "AKBNK.IS": {
+        "shares": 0,
+        "buy_price": 66.9,
+        "buy_date": "2026-03-29"
+      }
+    },
+    "watchlist": [],
+    "alerts": {},
+    "trades": []
+  },
+  "456789": {
+    "portfolio": {
+      "AKBNK.IS": {
+        "shares": 0,
+        "buy_price": 66.9,
+        "buy_date": "2026-03-29"
+      }
+    },
+    "watchlist": [],
+    "alerts": {},
+    "trades": []
+  },
+  "6984684791": {
+    "portfolio": {
+      "AKBNK.IS": {
+        "shares": 0,
+        "buy_price": 66.9,
+        "buy_date": "2026-03-29"
+      }
+    },
+    "watchlist": [
+      "ASTOR.IS",
+      "GENKM.IS",
+      "THYAO.IS"
+    ],
+    "alerts": {
+      "THYAO": {
+        "above": 300.01
+      }
+    },
+    "trades": []
+  },
+  "654321": {
+    "portfolio": {
+      "AKBNK.IS": {
+        "shares": 0,
+        "buy_price": 66.9,
+        "buy_date": "2026-03-29"
+      }
+    },
+    "watchlist": [],
+    "alerts": {
+      "THYAO.IS": {
+        "above": 300.0
+      }
+    },
+    "trades": []
+  },
+  "998877": {
+    "portfolio": {
+      "AKBNK.IS": {
+        "shares": 0,
+        "buy_price": 66.9,
+        "buy_date": "2026-03-29"
+      }
+    },
+    "watchlist": [],
+    "alerts": {},
+    "trades": []
+  },
+  "112233": {
+    "portfolio": {
+      "AKBNK.IS": {
+        "shares": 0,
+        "buy_price": 66.9,
+        "buy_date": "2026-03-29"
+      }
+    },
+    "watchlist": [],
+    "alerts": {
+      "THYAO.IS": {
+        "above": 100.0
+      }
+    },
+    "trades": []
+  }
+}

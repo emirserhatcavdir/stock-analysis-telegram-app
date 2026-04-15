@@ -1,0 +1,56 @@
+{
+  "654321": {
+    "THYAO.IS": [
+      {
+        "type": "rsi",
+        "created_at": 1775434563,
+        "cooldown": 3600,
+        "last_triggered": 0.0,
+        "side": "below",
+        "threshold": 30.0,
+        "condition": "rsi_threshold",
+        "symbol": "THYAO.IS",
+        "alert_type": "rsi",
+        "summary": "RSI crosses below 30"
+      },
+      {
+        "type": "score",
+        "created_at": 1775434563,
+        "cooldown": 3600,
+        "last_triggered": 0.0,
+        "side": "above",
+        "threshold": 75.0,
+        "condition": "score_threshold",
+        "symbol": "THYAO.IS",
+        "alert_type": "score",
+        "summary": "Score rises above 75"
+      },
+      {
+        "type": "cross",
+        "created_at": 1775434563,
+        "cooldown": 3600,
+        "last_triggered": 0.0,
+        "condition": "ma20_ma50",
+        "side": "below",
+        "symbol": "THYAO.IS",
+        "alert_type": "cross",
+        "summary": "MA20 crosses MA50"
+      }
+    ]
+  },
+  "6984684791": {
+    "THYAO.IS": [
+      {
+        "type": "signal",
+        "created_at": 1775435140,
+        "cooldown": 3600,
+        "last_triggered": 0.0,
+        "symbol": "THYAO.IS",
+        "alert_type": "signal",
+        "summary": "Signal becomes Target",
+        "fired": false,
+        "last_reset": 0.0
+      }
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "112233": {
+    "price:THYAO.IS:above:100.0000": {
+      "fired": true,
+      "condition_met": true,
+      "last_triggered": 1775434866.8140898,
+      "last_reset": 0.0
+    }
+  }
+}
