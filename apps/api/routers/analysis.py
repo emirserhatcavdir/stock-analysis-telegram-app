@@ -1,4 +1,4 @@
-"""Read-only analysis endpoints for Phase 2."""
+﻿"""Read-only analysis endpoints for Phase 2."""
 
 from __future__ import annotations
 
@@ -7,8 +7,8 @@ from concurrent.futures import ThreadPoolExecutor, TimeoutError
 
 from fastapi import APIRouter, HTTPException, Query
 
-from apps.api.deps import analyze, normalize_symbol, run_scan, score_analysis
-from apps.api.schemas import AnalysisResponse, ScanBist30Response, ScanItem, ScoreResponse
+from deps import analyze, normalize_symbol, run_scan, score_analysis
+from schemas import AnalysisResponse, ScanBist30Response, ScanItem, ScoreResponse
 
 router = APIRouter(prefix="/api", tags=["analysis"])
 logger = logging.getLogger(__name__)

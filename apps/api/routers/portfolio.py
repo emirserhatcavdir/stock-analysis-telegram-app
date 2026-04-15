@@ -1,4 +1,4 @@
-"""Portfolio endpoints for the Mini App."""
+﻿"""Portfolio endpoints for the Mini App."""
 
 from __future__ import annotations
 
@@ -6,8 +6,8 @@ from datetime import datetime
 
 from fastapi import APIRouter, HTTPException, Query
 
-from apps.api.deps import load_portfolio
-from apps.api.schemas import (
+from deps import load_portfolio
+from schemas import (
     MutationResponse,
     PortfolioAllocationItem,
     PortfolioInsightsResponse,
@@ -159,3 +159,4 @@ def buy(payload: TradeRequest) -> MutationResponse:
 @router.post("/portfolio/sell", response_model=MutationResponse)
 def sell(payload: TradeRequest) -> MutationResponse:
     return _trade(payload.user_id, "sell", payload)
+

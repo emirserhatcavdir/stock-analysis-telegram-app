@@ -1,11 +1,11 @@
-"""Watchlist endpoints for the Mini App."""
+﻿"""Watchlist endpoints for the Mini App."""
 
 from __future__ import annotations
 
 from fastapi import APIRouter, HTTPException, Query
 
-from apps.api.deps import get_chat_watchlist, load_watch_store
-from apps.api.schemas import MutationResponse, WatchlistAddRequest, WatchlistRemoveRequest, WatchlistResponse
+from deps import get_chat_watchlist, load_watch_store
+from schemas import MutationResponse, WatchlistAddRequest, WatchlistRemoveRequest, WatchlistResponse
 from stock_bot.analysis import normalize_symbol
 from stock_bot.data_manager import add_to_watchlist, remove_from_watchlist
 
@@ -58,3 +58,4 @@ def remove_watchlist_item(payload: WatchlistRemoveRequest) -> MutationResponse:
     if not removed:
         raise HTTPException(status_code=404, detail=f"{normalized} not in watchlist")
     return MutationResponse(ok=True, message=f"{normalized} removed from watchlist", user_id=user_id)
+

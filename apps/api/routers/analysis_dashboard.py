@@ -1,13 +1,13 @@
-"""Dashboard-facing analysis and chart endpoints."""
+﻿"""Dashboard-facing analysis and chart endpoints."""
 
 from __future__ import annotations
 
 from fastapi import APIRouter, HTTPException, Query
 from fastapi.responses import Response
 
-from apps.api.schemas import AnalysisResponse, ChartResponse, ChartSeriesResponse, ScoreResponse, SymbolResponse
-from apps.api.services.analysis_service import get_analysis, get_symbol_chart, get_symbol_chart_series, get_symbol_details
-from apps.api.services.scan_service import get_symbol_score
+from schemas import AnalysisResponse, ChartResponse, ChartSeriesResponse, ScoreResponse, SymbolResponse
+from services.analysis_service import get_analysis, get_symbol_chart, get_symbol_chart_series, get_symbol_details
+from services.scan_service import get_symbol_score
 
 router = APIRouter(tags=["analysis"])
 
@@ -79,3 +79,4 @@ def score(symbol: str) -> ScoreResponse:
         ma_alignment=_ma_alignment(data.get("ma20"), data.get("ma50"), data.get("ma200")),
         summary=data["summary"],
     )
+

@@ -1,4 +1,4 @@
-"""Shared scan/rank service for the dashboard API."""
+﻿"""Shared scan/rank service for the dashboard API."""
 
 from __future__ import annotations
 
@@ -6,7 +6,7 @@ import logging
 import math
 from typing import Any
 
-from apps.api.deps import (
+from deps import (
     SCAN_UNIVERSES,
     add_chat_watch_symbol,
     analyze,
@@ -14,7 +14,7 @@ from apps.api.deps import (
     scan_top_stocks,
     score_analysis,
 )
-from apps.api.services.analysis_service import get_analysis as _get_analysis
+from services.analysis_service import get_analysis as _get_analysis
 
 logger = logging.getLogger(__name__)
 
@@ -384,3 +384,4 @@ def get_symbol_score(symbol: str) -> dict[str, Any] | None:
         "ma_note": result.ma_availability_note,
         "summary": result.signal_summary,
     }
+

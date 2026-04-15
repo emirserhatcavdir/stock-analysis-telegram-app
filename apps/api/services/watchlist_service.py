@@ -1,10 +1,10 @@
-"""Watchlist service shared by Telegram bot and FastAPI routes."""
+﻿"""Watchlist service shared by Telegram bot and FastAPI routes."""
 
 from __future__ import annotations
 
 from typing import Any
 
-from apps.api.deps import get_chat_watchlist
+from deps import get_chat_watchlist
 
 
 def get_watchlist(user_id: int) -> dict[str, Any]:
@@ -42,3 +42,4 @@ def remove_symbol(user_id: int, symbol: str) -> dict[str, Any]:
         "symbol": normalized,
         "message": "Symbol removed" if saved and removed else "Symbol could not be removed",
     }
+

@@ -1,11 +1,11 @@
-"""Dashboard-facing watchlist endpoints."""
+﻿"""Dashboard-facing watchlist endpoints."""
 
 from __future__ import annotations
 
 from fastapi import APIRouter, HTTPException
 
-from apps.api.schemas import MutationResponse, WatchlistAddRequest, WatchlistRemoveRequest, UserWatchlistResponse
-from apps.api.services.watchlist_service import add_symbol, get_watchlist, remove_symbol
+from schemas import MutationResponse, WatchlistAddRequest, WatchlistRemoveRequest, UserWatchlistResponse
+from services.watchlist_service import add_symbol, get_watchlist, remove_symbol
 
 router = APIRouter(tags=["watchlist"])
 
@@ -29,3 +29,4 @@ def watchlist_remove(user_id: int, payload: WatchlistRemoveRequest) -> MutationR
     if not data["ok"]:
         raise HTTPException(status_code=400, detail=data["message"])
     return MutationResponse(ok=True, message=data["message"], user_id=user_id)
+

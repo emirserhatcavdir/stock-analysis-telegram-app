@@ -1,11 +1,11 @@
-"""Dashboard-facing scan and rank endpoints."""
+﻿"""Dashboard-facing scan and rank endpoints."""
 
 from __future__ import annotations
 
 from fastapi import APIRouter, HTTPException, Query
 
-from apps.api.schemas import AnalysisResponse, MutationResponse, ScanResponse, WatchlistAddRequest
-from apps.api.services.scan_service import add_symbol_to_watchlist, get_analysis, rank_symbols, run_scan
+from schemas import AnalysisResponse, MutationResponse, ScanResponse, WatchlistAddRequest
+from services.scan_service import add_symbol_to_watchlist, get_analysis, rank_symbols, run_scan
 
 router = APIRouter(tags=["scan"])
 
@@ -62,3 +62,4 @@ def watchlist_add(user_id: int, payload: WatchlistAddRequest) -> MutationRespons
     if not data["ok"]:
         raise HTTPException(status_code=400, detail=data["message"])
     return MutationResponse(ok=True, message=data["message"], user_id=user_id)
+

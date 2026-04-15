@@ -1,10 +1,10 @@
-"""Portfolio service shared by Telegram bot and FastAPI routes."""
+﻿"""Portfolio service shared by Telegram bot and FastAPI routes."""
 
 from __future__ import annotations
 
 from typing import Any
 
-from apps.api.deps import load_portfolio
+from deps import load_portfolio
 
 
 def get_portfolio(user_id: int) -> dict[str, Any]:
@@ -63,3 +63,4 @@ def remove_position(user_id: int, symbol: str) -> dict[str, Any]:
         "symbol": normalized,
         "message": "Position removed" if saved and removed else "Position could not be removed",
     }
+

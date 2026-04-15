@@ -1,11 +1,11 @@
-"""Dashboard-facing alert endpoints."""
+﻿"""Dashboard-facing alert endpoints."""
 
 from __future__ import annotations
 
 from fastapi import APIRouter, HTTPException
 
-from apps.api.schemas import AlertAddRequest, AlertRemoveRequest, AlertResponse, MutationResponse
-from apps.api.services.alert_service import add_advanced_alert, add_price_alert, get_alerts, remove_alert
+from schemas import AlertAddRequest, AlertRemoveRequest, AlertResponse, MutationResponse
+from services.alert_service import add_advanced_alert, add_price_alert, get_alerts, remove_alert
 
 router = APIRouter(tags=["alerts"])
 
@@ -51,3 +51,4 @@ def alerts_remove(user_id: int, payload: AlertRemoveRequest) -> MutationResponse
     if not data["ok"]:
         raise HTTPException(status_code=400, detail=data["message"])
     return MutationResponse(ok=True, message=data["message"], user_id=user_id)
+

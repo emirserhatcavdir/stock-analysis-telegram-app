@@ -1,10 +1,10 @@
-"""Service functions that reuse bot analysis/scanning logic."""
+﻿"""Service functions that reuse bot analysis/scanning logic."""
 
 from __future__ import annotations
 
 from typing import Any
 
-from apps.api.deps import (
+from deps import (
     SCAN_UNIVERSES,
     analyze,
     get_chat_watchlist,
@@ -90,3 +90,4 @@ def get_symbol_details(ticker: str) -> dict[str, Any] | None:
         "score_strength": scored.strength,
         "summary": result.signal_summary,
     }
+
