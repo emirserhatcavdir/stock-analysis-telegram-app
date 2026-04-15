@@ -20,18 +20,34 @@ from apps.api.routers.watchlist_dashboard import router as watchlist_dashboard_r
 
 def _cors_origins_from_env() -> list[str]:
     raw = os.getenv("FRONTEND_ORIGINS", "").strip()
-    if raw:
-        return [item.strip() for item in raw.split(",") if item.strip()]
-    return [
+    env_origins = [item.strip() for item in raw.split(",") if item.strip()]
+
+    prod_origin = os.getenv("VERCEL_PROD_ORIGIN", "").strip()
+    preview_origin = os.getenv("VERCEL_PREVIEW_ORIGIN", "").strip()
+
+    defaults = [
         "http://localhost:5173",
         "http://127.0.0.1:5173",
     ]
 
+    merged = defaults + env_origins + [prod_origin, preview_origin]
+    unique: list[str] = []
+    for origin in merged:
+        if origin and origin not in unique:
+            unique.append(origin)
+    return unique
+
+
+def _cors_allow_all_debug() -> bool:
+    value = os.getenv("CORS_ALLOW_ALL", "").strip().lower()
+    return value in {"1", "true", "yes", "on"}
+
 app = FastAPI(title="BIST Bot API", version="0.1.0")
+allow_all = _cors_allow_all_debug()
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=_cors_origins_from_env(),
-    allow_credentials=True,
+    allow_origins=["*"] if allow_all else _cors_origins_from_env(),
+    allow_credentials=False if allow_all else True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
